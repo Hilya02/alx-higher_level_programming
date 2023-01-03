@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ks 📃
+=======
+Tasks 📃
+>>>>>>> 0578a4d6f82c9628c887be145071cb38b9480a60
 0. Positive anything is better than negative nothing
 
 0-positive_or_negative.py: Python program that assigns a random signed number to the variable number each time it is executed and prints whether number is positive or negative.
