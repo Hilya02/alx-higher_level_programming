@@ -15,8 +15,8 @@ class Square:
     def size(self):
         """"The propery of size as the len of a side of Square
         Raises:
-        TypeError: if size != int
-        ValueErrorr: if size < 0
+            TypeError: if size != int
+            ValueErrorr: if size < 0
         """
         return self.__size
 
