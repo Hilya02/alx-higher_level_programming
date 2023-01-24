@@ -31,7 +31,7 @@ class Node:
         Returns: next node
         """
 
-         return (self.__next_node)
+        return (self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
