@@ -23,13 +23,13 @@ class Node:
 
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
-        self.__data = 
+        self.__data = value
 
     @property
-     def next_node(self):
-         """get next_node attribute
-         Returns: next node
-         """
+    def next_node(self):
+        """get next_node attribute
+        Returns: next node
+        """
 
          return (self.__next_node)
 
