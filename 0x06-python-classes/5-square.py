@@ -4,33 +4,33 @@
 
 class Square:
     """class Square
-     """
+    """
 
-     def __init__(self, size=0):
-         """Inizialitation of variables
-         Arg self identificador
-         size of square
-         """
-         self.size = size
+    def __init__(self, size=0):
+        """Inizialitation of variables
+        Arg self identificador
+        size of square
+        """
+        self.size = size
 
-     @property
-     def size(self):
-         """Inizialitation of variables
-         Arg self identificador
-         """
-         return self.__size
+    @property
+    def size(self):
+        """Inizialitation of variables
+        Arg self identificador
+        """
+        return self.__size
 
-     @size.setter
-     def size(self, value):
-         """Inizialitation of variables
-         Arg self identificador
-         value of square
-         """
-         if not isinstance(value, int):
-             raise TypeError("size must be an integer")
-         if value < 0:
-             raise valueError("size must be >= 0")
-         self.__size = value
+    @size.setter
+    def size(self, value):
+        """Inizialitation of variables
+        Arg self identificador
+        value of square
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise valueError("size must be >= 0")
+        self.__size = value
 
     def area(self):
         """Inizialitation of variables
