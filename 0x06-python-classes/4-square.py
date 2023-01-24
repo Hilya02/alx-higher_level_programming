@@ -19,9 +19,9 @@ class Square:
         """
         return self.__size ** 2
 
-
     @property
     def size(self):
+        """Inizialitation of variables
         Arg self identificador
         """
         return self.__size
