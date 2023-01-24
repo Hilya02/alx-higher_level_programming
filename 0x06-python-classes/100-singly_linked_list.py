@@ -55,6 +55,7 @@ class SinglyLinkedList:
         """make list printable"""
 
         printsll = ""
+        location = self.head
         while location:
             printsll += str(location.data) + "\n"
             location = location.next_node
