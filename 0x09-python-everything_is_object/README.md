@@ -43,23 +43,23 @@ Tasks 📃
 >>> b = a + 1
 6. Is equal
 6-answer.txt: What do these 3 lines print?
->>> s1 = "Holberton"
+>>> s1 = "Best School"
 >>> s2 = s1
 >>> print(s1 == s2)
 7. Is the same
 7-answer.txt: What do these 3 lines print?
->>> s1 = "Holberton"
+>>> s1 = "Best"
 >>> s2 = s1
 >>> print(s1 is s2)
 8. Is really equal
 8-answer.txt: What do these 3 lines print?
->>> s1 = "Holberton"
->>> s2 = "Holberton"
+>>> s1 = "Best School"
+>>> s2 = "Best School"
 >>> print(s1 == s2)
 9. Is really the same
 9-answer.txt: What do these 3 lines print?
->>> s1 = "Holberton"
->>> s2 = "Holberton"
+>>> s1 = "Best School"
+>>> s2 = "Best School"
 >>> print(s1 is s2)
 10. And with a list, is it equal
 10-answer.txt: What do these 3 lines print?
@@ -167,7 +167,7 @@ a is b
 >>> id(a)
 29. #pythonic
 
-100-magic_string.py: Python function magic_string() that returns the string "Holberton" n times the number of iteration.
+100-magic_string.py: Python function magic_string() that returns the string "BestSchool" n times the number of iteration.
 30. Low memory cost
 
 101-locked_class.py: Python class LockedClass with no attributes that prevents the user from dynamically creating any new instance attributes not called first_name.
@@ -199,8 +199,8 @@ print("Python")
 106-line3.txt: After the execution of line 3, is the str object pointed to by a deleted?
 106-line4.txt: After the execution of line 4, is the str object pointed to by b deleted?
 106-line5.txt: How many str objects are created by the execution of the last line in this script?
-a = "HBTN"
-b = "HBTN"
+a = "SCHL"
+b = "SCHL"
 del a
 del b
-c = "HBTN"
+c = "SCHL"
