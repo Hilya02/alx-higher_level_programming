@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-ttest for max_integer([..])
-"""
-=======
 #!/usr/bin/python3
 """Unittest for max_integer([..])
 """
@@ -66,4 +62,3 @@ class TestMaxInteger(unittest.TestCase):
     def test_number(self):
         with self.assertRaises(TypeError):
             max_integer(1)
->>>>>>> f24ab72fe4546bbfd174cdc2a0f43c832908478a
