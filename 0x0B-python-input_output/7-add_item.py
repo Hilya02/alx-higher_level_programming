@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-from sys import argv
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+"""
+adds all arguments to a Python list
+"""
+import sys
 
 
-list1 = []
+save = __import__('5-save_to_json_file.py').save_to_json_file
+load = __import__('6-load_from_json_file.py').load_from_json_file
 
+open("add_item.json", "a")
 try:
-    list1 = list(load_from_json_file("add_item.json"))
-
-except:
-    len(list1) == 0
-
-for arg in range(1, len(argv)):
-    list1.append(argv[arg])
-
-save_to_json_file(list1, "add_item.json")
+    i = load("add_item.json")
+except ValueError:
+    i = []
+save(i + sys.argv[1:], "add_item.json")
