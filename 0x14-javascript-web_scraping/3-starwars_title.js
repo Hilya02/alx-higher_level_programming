@@ -1,28 +1,14 @@
 #!/usr/bin/node
 
-const axios = require('axios');
+const request = require('request');
+const args = process.argv;
+const requestURL = 'https://swapi-api.hbtn.io/api/films/' + args[2];
 
-// Get the movie ID from the command-line arguments
-const movieId = process.argv[2];
-
-// Construct the API URL
-const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
-
-// Send a GET request to the API
-axios.get(apiUrl)
-  .then(response => {
-    // Check if the request was successful
-    if (response.status === 200) {
-      // Extract the movie title from the response data
-      const movieTitle = response.data.title;
-
-      // Print the movie title
-      console.log('Movie Title:', movieTitle);
-    } else {
-      console.log('Error:', response.status);
-    }
-  })
-  .catch(error => {
-    console.log('Error:', error.message);
-  });
-
+request.get(requestURL, (err, res, body) => {
+  if (err) {
+    console.log(err);
+  } else {
+    const data = JSON.parse(body);
+    console.log(data.title);
+  }
+});
