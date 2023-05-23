@@ -1,23 +1,28 @@
-import sys
-import requests
+#!/usr/bin/node
 
-# Get the movie ID from the command-line arguments
-movie_id = sys.argv[1]
+const axios = require('axios');
 
-# Construct the API URL
-api_url = f"https://swapi-api.alx-tools.com/api/films/{movie_id}"
+// Get the movie ID from the command-line arguments
+const movieId = process.argv[2];
 
-# Send a GET request to the API
-response = requests.get(api_url)
+// Construct the API URL
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-# Check if the request was successful
-if response.status_code == 200:
-    # Extract the movie title from the response JSON
-    movie_data = response.json()
-    movie_title = movie_data["title"]
+// Send a GET request to the API
+axios.get(apiUrl)
+  .then(response => {
+    // Check if the request was successful
+    if (response.status === 200) {
+      // Extract the movie title from the response data
+      const movieTitle = response.data.title;
 
-    # Print the movie title
-    print("Movie Title:", movie_title)
-else:
-    print("Error:", response.status_code)
+      // Print the movie title
+      console.log('Movie Title:', movieTitle);
+    } else {
+      console.log('Error:', response.status);
+    }
+  })
+  .catch(error => {
+    console.log('Error:', error.message);
+  });
 
